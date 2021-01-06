@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ibans</h1>
+
+
+<%= form_tag ibans_path, method: :get do %>
+  <%= text_field_tag :query,
+                      params[:query],
+                      placeholder: "Find IBAN"
+  %>
+  <%= submit_tag "Search"%>
+<% end %>
+
+<% if @ibans != nil %>
+<table>
+  <thead>
+  <tr>
+    <th>Found examples</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @ibans.each do |iban| %>
+    <tr>
+      <td><%= iban.code %></td>
+      <td><%= link_to 'Show', iban %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+  <% else %>
+<h1> Iban not found </h1>
+  <% end %>
+
+<%= link_to 'New Iban', new_iban_path %>
