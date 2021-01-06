@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @iban.code %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @iban.bank %>
+</p>
+
+<p>
+  <strong>Is seb:</strong>
+  <%= @iban.is_seb %>
+</p>
+
+<%= link_to 'Edit', edit_iban_path(@iban) %> |
+<%= link_to 'Back', ibans_path %>
