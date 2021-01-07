@@ -22,8 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'rswag-api' # rswag - api documentation gem
+gem 'rswag-ui'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -31,6 +31,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec'
+  gem 'rspec-rails' # we skipped default testing framework for rails with -T and using rspec instead
+  gem 'factory_bot_rails' # for creating spec fixtures
+  gem 'shoulda-matchers'
+  gem 'rswag-specs'
+  gem 'pry'
 end
 
 group :development do
