@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container text-center">
 <h1>Ibans</h1>
-
 
 <%= form_tag ibans_path, method: :get do %>
   <%= text_field_tag :query,
                       params[:query],
                       placeholder: "Find IBAN"
   %>
-  <%= submit_tag "Search"%>
+  <%=  submit_tag "Search"%>
 <% end %>
 
 <% if @ibans != nil %>
-<table>
+<table >
   <thead>
   <tr>
     <th>Found examples</th>
@@ -36,3 +35,4 @@
   <% end %>
 
 <%= link_to 'New Iban', new_iban_path %>
+</div>

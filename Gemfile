@@ -21,10 +21,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'bootstrap', '~> 4.0.0'
 gem 'rswag-api' # rswag - api documentation gem
 gem 'rswag-ui'
-
+gem 'jquery-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -37,6 +37,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rswag-specs'
   gem 'pry'
+
 end
 
 group :development do
