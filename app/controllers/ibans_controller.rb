@@ -12,7 +12,7 @@ class IbansController < ApplicationController
 
   def show
     @iban = Iban.find(params[:id])
-    if (contains(@iban) != nil)
+    if (@iban.code.match(/^(?=.{1,20}$)[A-Z]{2}\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}/))
       @iban.is_seb =true
       @iban.save
     else
@@ -54,8 +54,5 @@ class IbansController < ApplicationController
     params.require(:iban).permit(:code, :bank, :is_seb)
   end
 
-  def contains(str)
-    str =~ /[A-Z]{2}\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4} ?[\d]{0,2}/
-  end
 
 end
