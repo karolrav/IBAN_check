@@ -16,6 +16,8 @@ I modified task a little bit.
 So that there is only one service which does all the job. Exported csv displays both of required values(IBAN validation, BANK) which I think is way more efficient.
 Data is stored inside database but can be ADDed with file. IBANs are unique which can not dublicate.
 
+* LT regex `/^(?=.{1,20}$)[A-Z]{2}\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}/)` SEB unique code `7044`
+
 
 #Sneak peak photos:
  ![](img/1.png)
