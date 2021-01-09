@@ -12,8 +12,9 @@ Try app yourself which is deployed [here](https://ibanvalidation.herokuapp.com/.
 
 #Note
 I modified task a little bit.
-so that there is only one service which does all the job. Exported csv displays both of required values(IBAN validation, BANK) which I think is way more efficient.
-Data is stored inside database but can be ADDed with file. IBAN is unique which can not dublicate.
+
+So that there is only one service which does all the job. Exported csv displays both of required values(IBAN validation, BANK) which I think is way more efficient.
+Data is stored inside database but can be ADDed with file. IBANs are unique which can not dublicate.
 
 
 #Sneak peak photos:
