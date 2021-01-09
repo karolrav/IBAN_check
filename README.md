@@ -1,5 +1,6 @@
 # README
-Rails REST web-service to validate IBAN and IBAN array.
+Rails REST web-service to validate IBANs.
 
-Try app yourself https://ibanvalidation.herokuapp.com/
- 
+Try app yourself which is deplyed [here](https://ibanvalidation.herokuapp.com/.)
+
+
