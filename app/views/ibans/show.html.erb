@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="alert alert-success" role="alert">
 <p>
   <strong>Code:</strong>
   <%= @iban.code %>
@@ -14,5 +15,7 @@
   <strong>Is seb:</strong>
   <%= @iban.is_seb %>
 </p>
-
-<%= link_to 'Back', ibans_path %>
+</div>
+<div class="btn btn-light" >
+<%= link_to 'Back', ibans_path,:class => "btn"%>
+</div>

@@ -10,20 +10,18 @@ class IbansController < ApplicationController
     end
     end
 
-  def show
-
-  end
-
-
   def new
     @iban = Iban.new
   end
 
-
   def import
+    if params[:file].nil?
+    redirect_to :action => 'new', alert: "CSV document not present."
+      else
     @ibans = Iban.all
-    Iban.import(params[:file])#
-
+    Iban.import(params[:file])
+    redirect_to :action => 'index'
+    end
   end
 
   def self.to_csv

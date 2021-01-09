@@ -4,6 +4,7 @@ class Iban < ApplicationRecord
 
   validates :code, presence: true, uniqueness: true
   def self.import(file)
+    if (file != nil)
     CSV.foreach(file.path, headers: false) do |row|
       s_hash = Iban.new
       s_hash.code= row[0]
@@ -21,9 +22,11 @@ class Iban < ApplicationRecord
           s_hash.is_seb = "Incorrect IBAN"
           s_hash.save
         end
-      end
     end
+    else
 
+    end
+    end
 
 
   def self.to_csv

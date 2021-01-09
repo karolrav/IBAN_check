@@ -1,7 +1,15 @@
-<h>New Iban</h>
-<%= form_tag import_ibans_path, multipart: true do  %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import Csv" %>
-  <% end %>
+<div id="header02" class="clear" style="background-image: url(https://www.seb.lt/sites/default/files/web/backgrounds/bg_green_dark.jpg);">
 
-<%= link_to 'Back', ibans_path %>
+<%= form_tag import_ibans_path, :class => 'form-inline',multipart: true do  %>
+  <%= file_field_tag :file %>
+    <%= button_tag(type: "Import selected data to database", class: "btn btn-default") do %>
+      <h10>Add data to database</h10>
+    <% end %>
+    <% end %>
+
+
+</div>
+<div class="btn btn-light" >
+  <%= link_to 'Back', ibans_path,:class => "btn"%>
+</div>
+

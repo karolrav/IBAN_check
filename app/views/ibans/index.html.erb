@@ -1,40 +1,36 @@
 <p id="notice"><%= notice %></p>
-<div class="container text-center">
-<h1>Ibans</h1>
+<div id="header02" class="clear" style="background-image: url(https://www.seb.lt/sites/default/files/web/backgrounds/bg_green_dark.jpg);">
+<h1>Iban verification</h1>
+</div>
+<div class="box">
 
 <%= form_tag ibans_path, method: :get do %>
   <%= text_field_tag :query,
                       params[:query],
                       placeholder: "Find IBAN"
   %>
-  <%=  submit_tag "Search"%>
+    <input type="submit" id="edit-submit" name="op" value="Find" class="form-submit">
 <% end %>
 
-<% if @ibans != nil %>
 <table >
-  <thead>
-  <tr>
-    <th>Found examples</th>
-    <th colspan="3"></th>
-
-  </tr>
-  </thead>
 
   <tbody>
   <% @ibans.each do |iban| %>
     <tr>
+    <td><h5>Found examples</h5></td>
       <td><%= iban.code %></td>
-      <td><%= link_to 'Show', iban %></td>
+      <td class="btn btn-light"><%= link_to 'Show more information', iban %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
 <br>
-  <% else %>
-<h1> Iban not found </h1>
-  <% end %>
 
-  <%= link_to 'Download CSV list', ibans_path(format: :csv) %>
-<%= link_to 'New Iban', new_iban_path %>
+</div>
+
+<div class="btn btn-light">
+  <%= link_to 'Download CSV list', ibans_path(format: :csv), :class => "btn" %> |
+  <%= link_to 'Add Data from CSV', new_iban_path, :class => "btn"%>
+
 </div>
