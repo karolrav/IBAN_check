@@ -16,6 +16,7 @@
   <tr>
     <th>Found examples</th>
     <th colspan="3"></th>
+
   </tr>
   </thead>
 
@@ -34,5 +35,6 @@
 <h1> Iban not found </h1>
   <% end %>
 
+  <%= link_to 'Download CSV list', ibans_path(format: :csv) %>
 <%= link_to 'New Iban', new_iban_path %>
 </div>

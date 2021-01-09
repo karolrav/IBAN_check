@@ -11,14 +11,7 @@ class IbansController < ApplicationController
     end
 
   def show
-    @iban = Iban.find(params[:id])
-    if (@iban.code.match(/^(?=.{1,20}$)[A-Z]{2}\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}/))
-      @iban.is_seb =true
-      @iban.save
-    else
-      @iban.is_seb =false
-      @iban.save
-    end
+
   end
 
 
