@@ -5,4 +5,6 @@ Rails.application.routes.draw do
      resources :ibans do
        collection {post :import}
      end
+  root :to => 'ibans#index'
+
 end
