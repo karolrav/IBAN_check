@@ -20,6 +20,8 @@ Data is stored inside database but can be ADDed with file. IBANs are unique whic
 
 
 #Sneak peak photos:
- ![](img/1.png)
- ![](img/2.png)
+
+
+ ![](img/1.png) ![](img/2.png)
+
 
