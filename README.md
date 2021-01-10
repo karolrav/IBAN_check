@@ -14,12 +14,12 @@ Try app yourself which is deployed [here](https://ibanvalidation.herokuapp.com/.
 I modified task a little bit.
 
 So that there is only one service which does all the job. Exported csv displays both of required values(IBAN validation, BANK) which I think is way more efficient.
-Data is stored inside database but can be ADDed with file. IBANs are unique which can not dublicate.
+Data is stored inside database but can be Added with file. IBANs are unique which can not dublicate.
 
 * LT regex `/^(?=.{1,20}$)[A-Z]{2}\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}/)` SEB unique code `7044`
+* Rspec for test, Swagger for documentation(TODO).
 
-
-#Sneak peak photos:
+# Sneak peak photos:
 
 
  ![](img/1.png) ![](img/2.png)
